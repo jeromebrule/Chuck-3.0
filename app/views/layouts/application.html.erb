@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta property="og:image" content="http://jeromebrule.com/img/fb_icon.gif"/>
+<meta property="og:site_name" content="The Factual Chuck Norris Institute"/>
+<meta property="fb:app_id" content="127032977376280"/>
+<meta name="description" content="The Factual Chuck Norris Institute is a groupe of people devoted to promoting and researching every phenomenon in Factual Chuck-Norrisology."/>
+<head>
+  <title>Chuck 3.0 - <%=@controller.controller_name %></title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :all %>  
+    <%= csrf_meta_tag %>
+	<%= yield :metaFb %>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-3649141-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>	
+</head>
+<body id="<%=@controller.controller_name %>">
+
+<div id="fb-root"></div>
+
+<% if admin_signed_in? %> 
+	<div class="tools clearfix">
+		<h2>Administration tools</h2>
+		<ul>
+			<li><%= link_to 'New Fact', new_fact_path %></li>
+			<li><a href="/admins/sign_out">Logout</a></li>
+		</ul>
+	</div>
+<% end %>
+<div id="master" class="clearfix">
+	<div id="header">
+		<% link_to root_path do %><h1><span>The Factual Chuck Norris INSTITUTE</span></h1><% end %>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+	</div>
+	<div id="container">
+		<%= render :partial => "partials/main_nav"%>
+		<div id="content">
+			<%= yield %>
+		</div>
+	</div>
+</div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: '127032977376280', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+</body>
+</html>

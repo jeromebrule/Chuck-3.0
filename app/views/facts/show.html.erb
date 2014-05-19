@@ -1,0 +1,22 @@
+<% content_for :metaFb do %>
+	<meta property="og:title" content="<%= @fact.fact %>"/>
+	<meta property="og:url" content="<%= root_url %>facts/<%= @fact.id %>"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="<%= @fact.fact %>"/>
+	<meta name="description" content="<%= @fact.fact %>"/>
+<% end %>
+
+<div id="viewer">
+	<span class="huge"><%= @fact.fact %></span>
+</div>
+
+<fb:like href="<%= root_url %>facts/<%= @fact.id %>" layout="standard" send="true" show_faces="yes" width="450" height="20" action="like" colorscheme="dark"></fb:like>
+<br /><g:plusone size="medium"></g:plusone>
+<% if admin_signed_in? %>
+	<p>
+	  <b>Publish:</b>
+	  <%= @fact.publish %>
+	</p>
+	<%= link_to 'Edit', edit_fact_path(@fact) %> |
+	<%= link_to 'Back', facts_path %>
+<% end %>

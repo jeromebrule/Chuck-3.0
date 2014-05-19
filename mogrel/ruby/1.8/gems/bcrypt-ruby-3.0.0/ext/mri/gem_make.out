@@ -1,0 +1,7 @@
+/usr/bin/ruby extconf.rb 
+creating Makefile
+
+make
+gcc -I. -I/usr/lib/ruby/1.8/x86_64-linux -I/usr/lib/ruby/1.8/x86_64-linux -I.   -fPIC -g -O2  -fPIC   -c crypt.c
+make: gcc: Command not found
+make: *** [crypt.o] Error 127

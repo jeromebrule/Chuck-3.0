@@ -1,0 +1,77 @@
+body{ margin: 0; padding: 0; background: #1F1514; font-family: Arial; font-size: 12px; color: #C1A689; }
+h1 span, h2 span{ display: none; }
+a{ color: #FFD193 !important; text-decoration: underline; }
+a:hover{ color: #C1A689; background: none; }
+ol{ width: 425px; }
+
+/*-------------------------------------------
+* Main Template
+*/
+#master{ width: 1000px; height: 800px; margin-left: 80px; background: url(/images/bgChuck.jpg) no-repeat top right; }
+#container{ width: 695px; margin: 0 0 30px 0; float: left; }
+#txtContent{ width: 250px; float: left; }
+#fact{ width: 190px; float: left; margin-left: 30px; }
+#about #content{ width: 480px; }
+
+/*-------------------------------------------
+* Title image
+*/
+h1{ width: 493px; height: 104px; background-image: url(/images/header.gif); }
+h2#h_about{ width: 238px; height: 15px; background-image: url(/images/h2About.gif); }
+h2#h_debate{ width: 222px; height: 15px; background-image: url(/images/h2Debate.gif); }
+h2#h_random{ background-image: url(/images/h2Random.gif); width: 163px; height: 39px; }
+h2#h_know{ width: 171px; height: 39px; background-image: url(/images/h2Know.gif); }
+
+/*-------------------------------------------
+* Main Navigation
+*/
+#mainMenu{ margin: 0 0 0 5px; padding: 0; float: right; }
+#mainMenu ul{ margin: 0 0 30px 0; padding-left: 15px; list-style-type: none; border-left: 1px solid #725A43; }
+#mainMenu li{ margin: 20px 0 0 0; }
+
+#mainMenu li span{ display: none; }
+#mainMenu a{ width: 160px; height: 12px; background-color: transparent; background-repeat: no-repeat; display: block; cursor: pointer; cursor: hand; } 
+#mainMenu a:hover{ background-position: 0 -12px; }
+#mainMenu #home a{ background-image: url(/images/mainMenu-home.gif); }
+#mainMenu #facts a{ background-image: url(/images/mainMenu-facts.gif); }
+#mainMenu #photos a{ background-image: url(/images/mainMenu-photos.gif); }
+#mainMenu #fan a{ background-image: url(/images/mainMenu-fan.gif); }
+#mainMenu #forum a{ background-image: url(/images/mainMenu-forum.gif); }
+#mainMenu #about a{ background-image: url(/images/mainMenu-about.gif); }
+
+#mainMenu .socialTools{ margin: 0 0 0 15px; }
+#mainMenu .fb_iframe_widget{ background: #f3f3f3; }
+.plusOne{ margin: 10px 0 0 0; }
+
+/*-------------------------------------------
+* Fact listing
+*/
+#factList li{ border-bottom: 1px solid #725A43; padding: 5px 0; }
+#factList a{ color: #C1A689 !important; text-decoration: none; }
+#factList .socialTools{ margin: 5px 0 0 0; }
+#viewer{ width: 465px; margin: 0 0 20px 0; padding: 0 5px 10px 0; border-bottom: 1px solid #725A43; }
+.msg{ margin: 10px 0 0 0; font-size: 16px; }
+.huge{ font-size: 30px; }
+
+/*-------------------------------------------
+* Pagination
+*/
+.pagination{ margin-left: 120px; }
+
+/*-------------------------------------------
+* Tools
+*/
+.tools{ width: 100%; height: 30px; background: #fff; border-bottom: 3px solid #FFD193; }
+.tools h2{ margin: 5px 0 0 80px; float: left; }
+.tools ul{ margin: 5px 30px 0 0; float: right; list-style: none; }
+.tools li{ margin: 0 0 0 15px; float: left; }
+.tools a{ font-size: 16px; color: #000 !important; }
+.tools a:hover{ background: transparent; color: #FFD193 !important; }
+
+/*-------------------------------------------
+* Clearfix
+*/
+html[xmlns] .clearfix {	display: block; }
+* html .clearfix { height: 1%; }
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix {	display: inline-block; }

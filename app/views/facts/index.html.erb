@@ -1,0 +1,6 @@
+<ol id="factList">
+	<%= render :partial => @fact %>
+</ol>
+<%= will_paginate @fact %>
+<%= pageless(@fact.total_pages) %> 
+
